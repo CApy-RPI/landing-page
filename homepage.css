@@ -1,0 +1,89 @@
+.section {
+    width: 100%; 
+    background: rgb(61,61,61);
+    background: linear-gradient(180deg, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 14%);
+    display: flex; 
+}
+
+#hero {
+    padding: 200px; 
+    max-width: 500px;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    width: max-content; 
+    color: white; 
+    padding-left: 50%; 
+    margin-bottom: 0; 
+}
+
+.slogan {
+    font-size: 60px;
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    margin: 10px 0;
+    color: white; 
+    width: max-content; 
+    padding-left: 50%;
+    margin-bottom: 0; 
+}
+
+.description {
+    color: #67A6BE;
+    font-size: 22px;
+    font-family: "mundial", san-serif; 
+    font-weight: 100; 
+    margin-bottom: 20px;
+    width: 700px; 
+    padding-left: 50%; 
+    margin-top: 3px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-family: "mundial", san-serif; 
+    font-weight: 400; 
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+    margin-left: 50%; 
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #cccccc;
+}
+
+.hero-image img {
+    width: 800px; 
+    height: auto;
+    
+}
+
+#why {
+    width: 100%; 
+}
+
+.why_sub {
+    justify-content: center;
+    color: #67A6BE; 
+    font-family: "mundial", san-serif; 
+    font-weight: 500; 
+    font-size: 50px; 
+    letter-spacing: 8px; 
+}
+
+.why_slogan {
+    color: white; 
+}
+
+.why_desc {
+    color: white; 
+}

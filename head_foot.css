@@ -1,0 +1,160 @@
+   body {
+    margin: 0px; 
+    padding: 0px; 
+    background-color: #C7DBE6; 
+  }
+  
+  .area { 
+    width: 100%;
+    height: 100%;  
+    padding:0px;
+    margin: 0px;
+    display: grid;
+  }
+  
+  #header {
+    display: grid; 
+    grid-template-columns: 1fr auto 1fr; 
+    position: relative; 
+    align-items: center;
+    height: 100px; 
+    background-color: black;
+  }
+  
+  #logo { 
+    position: relative;
+    height: 50px;
+    grid-column-start: 1; 
+    padding-left: 30px;  
+  }
+
+  #logo_container {
+    width: min-content; 
+  }
+  
+  #navbar {  
+    margin: auto; 
+    justify-self: center;
+    width: 800px; 
+    height: 50px; 
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    font-family: "mundial", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+  }
+
+  #startbar {
+    padding-right: 30px;
+    grid-column-start: 3;
+    justify-self: right;
+    width: 270px; 
+    height: 50px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 2fr; 
+    position: relative; 
+    align-items: center;
+  }
+
+  #discord {
+    align-items: center;
+    width: min-content; 
+    height: 28px;
+  }
+  
+  #discord:hover #discord_icon path {
+    transition: fill 0.3s ease-in-out;
+    fill: rgb(140, 140, 140); 
+  }
+
+  #github {
+    align-items: center;
+    width: min-content; 
+    height: 28px;
+  }
+  
+  #github:hover #github_icon path {
+    transition: fill 0.3s ease-in-out;
+    fill: rgb(140, 140, 140); 
+  }
+
+#start {
+    background-color: #67A6BE;
+    border-radius: 5px;
+    display: inline-block; 
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    white-space: nowrap;
+    cursor: pointer;
+    color:#ffffff;
+    font-family: "mundial", san-serif;
+    font-weight: 100; 
+    font-size: 16px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+#start:hover {
+    transition: background 0.3s ease-in-out;
+    background-color:#4d798a;
+}
+#start:active {
+    position:relative;
+    top:1px;
+}
+  
+  #page {
+    color: white; 
+    font-weight: 100; 
+    font-size: 20px; 
+    text-align: center; 
+    text-decoration: none;
+    width: min-content;
+    height: min-content; 
+    white-space: nowrap; 
+  }
+
+  #page:hover {
+    transition: color 0.3s ease-in-out;
+    color: rgb(140, 140, 140);
+  }
+
+  #home {
+    color: #67A6BE; 
+    font-weight: 100; 
+    font-size: 20px; 
+    text-align: center; 
+    text-decoration: none;
+    width: min-content;
+    height: min-content; 
+  }
+
+  #home:hover {
+    transition: color 0.3s ease-in-out;
+    color: #4d798a;
+  }
+
+  #footer {
+    display: grid; 
+    grid-template-columns: 1fr auto 1fr; 
+    position: relative; 
+    align-items: center;
+    height: 120px; 
+    background-color: black;
+    box-shadow: 0 -0.2px 0 white;
+  }
+
+  #bottomstartbar {
+    padding-right: 25px;
+    grid-column-start: 3;
+    justify-self: right;
+    width: 100px; 
+    height: 50px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    position: relative; 
+    align-items: center;
+  }
+  
+  
