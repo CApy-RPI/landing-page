@@ -2,12 +2,23 @@
     width: 100%; 
     background: rgb(61,61,61);
     background: linear-gradient(180deg, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 14%);
-    display: flex; 
+    display: flex;
+    justify-content: center; 
+    overflow: hidden; 
 }
 
-#hero {
-    padding: 200px; 
-    max-width: 500px;
+#top_section {
+    background: linear-gradient(180deg, rgba(61,61,61,1) 14%, rgba(0,0,0,1) 26%);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%; 
+}
+
+#hero { 
+    width: 100%; 
+    padding: 20vw 0vw 20vw 15vw; 
+    margin: auto; 
 }
 
 .subtitle {
@@ -15,9 +26,9 @@
     font-weight: 100;
     font-family: "Tilt Warp";
     width: max-content; 
-    color: white; 
-    padding-left: 50%; 
+    color: white;  
     margin-bottom: 0; 
+    z-index: 1;
 }
 
 .slogan {
@@ -27,19 +38,19 @@
     margin: 10px 0;
     color: white; 
     width: max-content; 
-    padding-left: 50%;
     margin-bottom: 0; 
+    z-index: 1;
 }
 
 .description {
     color: #67A6BE;
     font-size: 22px;
-    font-family: "mundial", san-serif; 
+    font-family: "mundial", sans-serif; 
     font-weight: 100; 
     margin-bottom: 20px;
     width: 700px; 
-    padding-left: 50%; 
     margin-top: 3px;
+    z-index: 1;
 }
 
 .cta-button {
@@ -47,43 +58,187 @@
     background-color: white;
     color: black;
     font-size: 18px;
-    font-family: "mundial", san-serif; 
+    font-family: "mundial", sans-serif; 
     font-weight: 400; 
-    padding: 12px 20px;
+    padding: 8px 20px 12px 20px;
     text-decoration: none;
     border-radius: 10px;
     transition: background 0.3s ease-in-out;
-    margin-left: 50%; 
     text-align: center;
 }
 
 .cta-button:hover {
-    background-color: #cccccc;
+    background-color: black;
+    color: white; 
+    box-shadow: inset 0 0 1px 2px white;
 }
 
-.hero-image img {
-    width: 800px; 
-    height: auto;
-    
+.hero-image {
+    position: relative; 
+    right: 175px;  
+    width: min-content; 
+    height: min-content; 
 }
 
-#why {
+.hero-image img{ 
+    position: relative; 
+    width: 500px; 
+}
+
+.why_section {
     width: 100%; 
+    background: rgb(61,61,61);
+    background: linear-gradient(180deg, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 14%);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+.why {
+    padding: 50px 200px 50px 200px; 
+    align-items: center; 
+    width: min-content;
+    height: min-content; 
 }
 
 .why_sub {
     justify-content: center;
     color: #67A6BE; 
-    font-family: "mundial", san-serif; 
+    font-family: "mundial", sans-serif; 
     font-weight: 500; 
     font-size: 50px; 
     letter-spacing: 8px; 
+    margin-bottom: 0; 
 }
 
 .why_slogan {
+    font-size: 50px;
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    margin-bottom: 0;
+    margin-top: 20px; 
     color: white; 
+    width: max-content; 
 }
 
 .why_desc {
+    color: rgb(140, 140, 140); 
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "mundial", sans-serif;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.boxes {
+    display: flex; 
+    width: 100%; 
+    height: min-content; 
+    justify-content: center;
+    gap: 7vw; 
+    padding-bottom: 125px;
+}
+
+.box {
+    text-align: left; 
+    background-color: #182226; 
+    padding: 20px 50px 30px 20px; 
+    border-radius: 5px; 
+    border-bottom: 20px solid #67A6BE; 
+}
+
+.box_head {
+    margin-top: 15px; 
+    color: white;
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    margin-bottom: 0; 
+}
+
+.box_desc {
+    color: #67A6BE;
+    font-weight: 500;
+    font-family: "mundial", sans-serif;
+    margin-top: 10px; 
+}
+
+.learn_more {
     color: white; 
+    text-decoration: none;
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    transition: color 0.3s ease-in-out;
+}
+
+.learn_more:hover {
+    color: rgb(140, 140, 140); 
+}
+
+.stat_sub {
+    color: white; 
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    font-size: 60px; 
+    padding-right: 9vw; 
+}
+
+#stats {
+    display: flex;  
+    padding: 50px; 
+    margin: auto; 
+    align-items: center;
+    z-index: 2;
+    position: relative; 
+}
+
+.stat {
+    width: min-content; 
+    height: min-content; 
+    display: inline-block; 
+    text-align: left; 
+    padding-left: 80px; 
+    padding-right: 80px;
+    border-right: 1px solid #67A6BE;
+}
+
+.number {
+    color: white; 
+    font-weight: 100;
+    font-family: "Tilt Warp";
+    font-size: 60px; 
+    margin: auto;  
+    
+}
+
+.caption {
+    color: #67A6BE; 
+    font-weight: 100;
+    font-size: 30px; 
+    font-family: "Tilt Warp";
+    margin: auto; 
+}
+
+#colleges {
+    border-right: none; 
+}
+
+#bg img{
+    width: 550px; 
+    transform: scaleX(-1);
+    opacity: 50%;
+}
+
+#bg {
+    height: min-content; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+}
+
+#impact {
+    overflow: hidden; 
+    width: 100%; 
+    position: relative;  
 }
