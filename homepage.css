@@ -243,7 +243,7 @@
     position: relative;  
 }
 
-@media (max-width: 768px) {  /* For tablets and smaller screens */
+@media screen and (max-width: 768px) {  /* For tablets and smaller screens */
     #hero {
         padding: 10vw 5vw;
         text-align: center;
@@ -299,7 +299,7 @@
     }
 }
 
-@media (max-width: 480px) {  /* For mobile devices */
+@media screen and (max-width: 480px) {  /* For mobile devices */
     .slogan {
         font-size: 30px;
     }
