@@ -24,9 +24,9 @@
   
   #logo { 
     position: relative;
-    height: 50px;
+    height: 4vw;
     grid-column-start: 1; 
-    padding-left: 30px;  
+    padding-left: 3vw;  
   }
 
   #logo_container {
@@ -36,8 +36,8 @@
   #navbar {  
     margin: auto; 
     justify-self: center;
-    width: 800px; 
-    height: 50px; 
+    width: min-content  ; 
+    height: 5vw; 
     display: grid; 
     justify-content: center;
     align-items: center;
@@ -45,10 +45,11 @@
     font-family: "mundial", sans-serif;
     font-style: normal;
     font-weight: 100;
+    column-gap: 3vw; 
   }
 
   #startbar {
-    padding-right: 30px;
+    padding-right: 3vw;
     grid-column-start: 3;
     justify-self: right;
     width: 270px; 
@@ -60,9 +61,8 @@
   }
 
   #discord {
-    align-items: center;
-    width: min-content; 
-    height: 28px;
+    align-items: center; 
+    height: 3vw;
   }
   
   #discord:hover #discord_icon path {
@@ -72,8 +72,7 @@
 
   #github {
     align-items: center;
-    width: min-content; 
-    height: 28px;
+    height: 3vw;
   }
   
   #github:hover #github_icon path {
@@ -92,8 +91,8 @@
     color:#ffffff;
     font-family: "mundial", san-serif;
     font-weight: 100; 
-    font-size: 16px;
-    padding: 10px 30px;
+    font-size: 1.2vw;
+    padding: 0.5vw 1.3vw;
     text-decoration: none;
 }
 #start:hover {
@@ -108,7 +107,7 @@
   #page {
     color: white; 
     font-weight: 100; 
-    font-size: 20px; 
+    font-size: 1.2vw; 
     text-align: center; 
     text-decoration: none;
     width: min-content;
@@ -124,7 +123,7 @@
   #home {
     color: #67A6BE; 
     font-weight: 100; 
-    font-size: 20px; 
+    font-size: 1.2vw; 
     text-align: center; 
     text-decoration: none;
     width: min-content;
@@ -158,5 +157,89 @@
     position: relative; 
     align-items: center;
   }
+
+  @media screen and (max-width: 1024px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    #startbar {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 15px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    #startbar {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    #startbar {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #footer {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+}
   
   
