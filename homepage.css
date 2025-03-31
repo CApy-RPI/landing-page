@@ -21,12 +21,14 @@
 
 #impact {
     background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgba(0,0,0,1) 35%);
+    justify-items: center;
 }
 
 #hero { 
     width: 100%; 
     padding: 20vw 0vw 20vw 15vw; 
     margin: auto; 
+    z-index: 1; 
 }
 
 .subtitle {
@@ -83,9 +85,10 @@
 
 .hero-image {
     position: relative; 
-    right: 175px;  
+    right: 5vw;  
     width: min-content; 
     height: min-content; 
+    z-index: 0; 
 }
 
 .hero-image img{ 
@@ -109,7 +112,7 @@
 .why {
     padding: 50px 200px 50px 200px; 
     align-items: center; 
-    width: 75vw;
+    width: 76vw;
     height: min-content; 
 }
 
@@ -191,13 +194,13 @@
     color: white; 
     font-weight: 100;
     font-family: "Tilt Warp";
-    font-size: 60px; 
-    padding-right: 9vw; 
+    font-size: 60px;
+    width: 25vw; 
 }
 
 #stats {
     display: flex;  
-    padding: 50px; 
+    padding: 50px 0px 50px 0px; 
     margin: auto; 
     align-items: center;
     z-index: 2;
@@ -255,6 +258,20 @@
     overflow: hidden; 
     width: 100%; 
     position: relative;  
+}
+
+@media screen and (max-width: 1024px) {
+    .why {
+        padding: 30px 50px;
+        width: 90%;
+    }
+
+    .stat_sub {
+        width: 50vw;
+        max-width: 90%;
+        text-align: center; 
+    }
+    
 }
 
 @media screen and (max-width: 768px) {  /* For tablets and smaller screens */
@@ -319,7 +336,7 @@
 
     .stat_sub {
         padding-right: 0; 
-        text-align: center;
+        text-align: center; 
     }
 
     #colleges {
