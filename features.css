@@ -1,0 +1,195 @@
+.section {
+    width: 100%; 
+    padding-top: 100px; 
+    background: rgb(61,61,61);
+    background: linear-gradient(180deg, rgb(24, 24, 24) 25%, rgba(0,0,0,1) 39%, rgb(24, 24, 24) 86%);
+    display: flex;
+    overflow: hidden; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.sub {
+    font-family: "Tilt Warp"; 
+    color: white; 
+    font-weight: 100; 
+}
+
+
+#bg img{
+    width: 400px; 
+    transform: scaleX(-1);
+    opacity: 20%;   
+    max-width: 100%;
+}
+
+#bg {
+    height: min-content; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .why {
+        padding: 30px 50px;
+        width: 90%;
+    }
+
+    .stat_sub {
+        width: 50vw;
+        max-width: 90%;
+        text-align: center; 
+    }
+    
+}
+
+@media screen and (max-width: 768px) {  /* For tablets and smaller screens */
+    #hero {
+        padding: 10vw 5vw;
+        text-align: center;
+    }
+
+    .subtitle, .slogan, .description {
+        text-align: center;
+        width: auto;
+    }
+
+    .description {
+        font-size: 18px; 
+    }
+
+    .slogan {
+        font-size: 50px; 
+    }
+
+    .hero-image {
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 50px; 
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .boxes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+         
+    }
+
+    .box {
+        width: 30vw;  
+    }
+
+    .why {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #stats {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .stat {
+        padding: 20px 0;
+        border-right: none;
+        border-bottom: 1px solid #67A6BE;
+        width: 100%;
+    }
+
+    .stat_sub {
+        padding-right: 0; 
+        text-align: center; 
+    }
+
+    #colleges {
+        border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 480px) {  /* For mobile devices */
+    #top_section {
+        flex-direction: column;
+        justify-items: center;
+        padding: 30px 0px 30px 0px;  
+    }
+
+    #hero {
+        width: 90vw; 
+    }
+
+    .hero-image img {
+        width: 70vw; 
+    }
+
+    .hero-image {
+        padding-left: 10vw; 
+    }
+
+    .slogan {
+        font-size: 35px;
+        padding: 0px; 
+    }
+
+    .description {
+        font-size: 13px;
+        padding: 0px;
+    }
+
+    .subtitle {
+        font-size: 13px; 
+    }
+
+    .cta-button {
+        font-size: 13px;
+    }
+
+    .why_sub, .why_slogan {
+        font-size: 25px;
+    }
+
+    .why_desc {
+        font-size: 17px;
+    }
+
+    .box {
+        padding: 3vw 6vw 4vw 3vw;
+        width: 40vw; 
+    }
+    
+    .box_desc {
+        font-size: 13px; 
+    }
+
+    .box_head {
+        font-size: 15px; 
+    }
+
+    .learn_more {
+        font-size: 13px; 
+    }
+
+    .stat_sub, .number {
+        font-size: 40px;
+    }
+
+    .stat_sub {
+        padding-right: 0; 
+        text-align: center;
+    }
+
+    .caption {
+        font-size: 20px;
+    }
+}
