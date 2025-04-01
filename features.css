@@ -3,193 +3,148 @@
     padding-top: 100px; 
     background: rgb(61,61,61);
     background: linear-gradient(180deg, rgb(24, 24, 24) 25%, rgba(0,0,0,1) 39%, rgb(24, 24, 24) 86%);
-    display: flex;
+    display: wrap;
     overflow: hidden; 
+    position: relative; 
 }
 
 * {
     box-sizing: border-box;
 }
 
+#subheading {
+    width: 100%;    
+}
+
 .sub {
     font-family: "Tilt Warp"; 
     color: white; 
     font-weight: 100; 
+    font-size: 4vw; 
+    width: 72%; 
+    padding: 6vw 0vw 5vw 13vw; 
+    z-index: 2;
+}
+
+#feature_grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    padding: 0vw 0vw 17vw 5vw; 
+    z-index: 2;
+}
+
+#feature {
+    width: 25vw; 
+}
+
+#icon {
+    background-color: #67A6BE; 
+    box-shadow: -8px 8px #182226; 
+    width: 6vw; 
+    height: 6vw;  
+    border-radius: 10%;
+    text-align: center;
+}
+
+#icon svg {    
+    display: block; 
+    margin: auto;
+    padding: 0.7vw;   
+}
+
+.heading {
+    font-family: "Tilt Warp"; 
+    color: white; 
+    font-weight: 100; 
+    font-size: 1.5vw; 
+    margin-bottom: 5px; 
+}
+
+.text {
+    margin-top: 0px;  
+    font-family: "Mundial";
+    font-weight: 100; 
+    color: #67A6BE;
+    font-size: 1.5vw; 
 }
 
 
-#bg img{
-    width: 400px; 
+#bg1 img{
+    width: 800px; 
     transform: scaleX(-1);
     opacity: 20%;   
     max-width: 100%;
 }
 
-#bg {
+#bg1 {
     height: min-content; 
     position: absolute; 
-    top: 0; 
+    top: 80px; 
     right: 0; 
     overflow: hidden; 
     max-width: 100%;
+    z-index: 1;
 }
 
-@media screen and (max-width: 1024px) {
-    .why {
-        padding: 30px 50px;
-        width: 90%;
-    }
-
-    .stat_sub {
-        width: 50vw;
-        max-width: 90%;
-        text-align: center; 
-    }
-    
+#bg2 img{
+    width: 900px; 
+    -webkit-transform: scaleX(-1) rotate(160deg);
+    opacity: 20%;   
+    max-width: 100%;
 }
 
-@media screen and (max-width: 768px) {  /* For tablets and smaller screens */
-    #hero {
-        padding: 10vw 5vw;
-        text-align: center;
-    }
-
-    .subtitle, .slogan, .description {
-        text-align: center;
-        width: auto;
-    }
-
-    .description {
-        font-size: 18px; 
-    }
-
-    .slogan {
-        font-size: 50px; 
-    }
-
-    .hero-image {
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding-top: 50px; 
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .boxes {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-         
-    }
-
-    .box {
-        width: 30vw;  
-    }
-
-    .why {
-        padding: 20px;
-        width: 90%;
-    }
-
-    #stats {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-
-    .stat {
-        padding: 20px 0;
-        border-right: none;
-        border-bottom: 1px solid #67A6BE;
-        width: 100%;
-    }
-
-    .stat_sub {
-        padding-right: 0; 
-        text-align: center; 
-    }
-
-    #colleges {
-        border-bottom: none;
-    }
+#bg2 {
+    height: min-content; 
+    position: absolute; 
+    bottom: 0;  
+    left: -300px;  
+    overflow: hidden; 
+    max-width: 100%;
+    z-index: 1;  
 }
+
 
 @media screen and (max-width: 480px) {  /* For mobile devices */
-    #top_section {
-        flex-direction: column;
-        justify-items: center;
-        padding: 30px 0px 30px 0px;  
-    }
-
-    #hero {
-        width: 90vw; 
-    }
-
-    .hero-image img {
-        width: 70vw; 
-    }
-
-    .hero-image {
-        padding-left: 10vw; 
-    }
-
-    .slogan {
-        font-size: 35px;
-        padding: 0px; 
-    }
-
-    .description {
-        font-size: 13px;
-        padding: 0px;
-    }
-
-    .subtitle {
-        font-size: 13px; 
-    }
-
-    .cta-button {
-        font-size: 13px;
-    }
-
-    .why_sub, .why_slogan {
-        font-size: 25px;
-    }
-
-    .why_desc {
-        font-size: 17px;
-    }
-
-    .box {
-        padding: 3vw 6vw 4vw 3vw;
-        width: 40vw; 
+    body {
+        overflow-x: hidden; 
     }
     
-    .box_desc {
-        font-size: 13px; 
+    .sub {
+        padding: 0vw 0vw 5vw 13vw; 
     }
 
-    .box_head {
-        font-size: 15px; 
+    #bg1 img{
+        width: 300px; 
+        transform: scaleX(-1);
+        opacity: 20%;   
+        max-width: 100%;
     }
-
-    .learn_more {
-        font-size: 13px; 
+    
+    #bg1 {
+        height: min-content; 
+        position: absolute; 
+        top: 30px; 
+        right: 0; 
+        overflow: hidden; 
+        max-width: 100%;
+        z-index: 1;
     }
-
-    .stat_sub, .number {
-        font-size: 40px;
+    
+    #bg2 img{
+        width: 300px;
+        height: 300px;  
+        -webkit-transform: scaleX(-1) rotate(160deg);
+        opacity: 20%;   
+        max-width: 100%;
     }
-
-    .stat_sub {
-        padding-right: 0; 
-        text-align: center;
-    }
-
-    .caption {
-        font-size: 20px;
+    
+    #bg2 {
+        height: min-content; 
+        position: absolute; 
+        bottom: 0;  
+        left: -110px;  
+        overflow: hidden; 
+        max-width: 100%;
+        z-index: 1;  
     }
 }
