@@ -6,10 +6,24 @@
     display: wrap;
     overflow: hidden; 
     position: relative; 
+    height: 100%; 
+    z-index: 0; 
+}
+
+html {
+    height: 100%; 
 }
 
 * {
     box-sizing: border-box;
+}
+
+#subheading, #feature_grid {
+    z-index: 10; 
+}
+
+#subheading > * {
+    z-index: 10; 
 }
 
 #subheading {
@@ -23,14 +37,16 @@
     font-size: 4vw; 
     width: 72%; 
     padding: 6vw 0vw 5vw 13vw; 
-    z-index: 2;
 }
 
 #feature_grid {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
     padding: 0vw 0vw 17vw 5vw; 
-    z-index: 2;
+}
+
+#feature_grid > * {
+    z-index: 10; 
 }
 
 #feature {
@@ -68,9 +84,17 @@
     font-size: 1.5vw; 
 }
 
+#bg1, #bg2 {
+    z-index: 1; 
+}
+
+#bg1 img, #bg2 img {
+    pointer-events: none; 
+}
+
 
 #bg1 img{
-    width: 800px; 
+    width: 50vw; 
     transform: scaleX(-1);
     opacity: 20%;   
     max-width: 100%;
@@ -79,16 +103,15 @@
 #bg1 {
     height: min-content; 
     position: absolute; 
-    top: 80px; 
+    top: 50px; 
     right: 0; 
     overflow: hidden; 
     max-width: 100%;
-    z-index: 1;
 }
 
 #bg2 img{
-    width: 900px; 
-    -webkit-transform: scaleX(-1) rotate(160deg);
+    width: 50vw; 
+    -webkit-transform: scaleX(-1) rotate(170deg);
     opacity: 20%;   
     max-width: 100%;
 }
@@ -97,20 +120,32 @@
     height: min-content; 
     position: absolute; 
     bottom: 0;  
-    left: -300px;  
+    left: -20vw;  
     overflow: hidden; 
-    max-width: 100%;
-    z-index: 1;  
+    max-width: 100%; 
 }
 
 
 @media screen and (max-width: 480px) {  /* For mobile devices */
+    .section {
+        height: max-content; 
+    }
+
     body {
-        overflow-x: hidden; 
+        height: 100%;  
     }
     
-    .sub {
-        padding: 0vw 0vw 5vw 13vw; 
+    .sub { 
+        font-size: 6vw; 
+        width: 95%; 
+        padding: 5vw; 
+        margin: 0px; 
+    }
+
+    #subheading {
+        width: 100%; 
+        margin: 0; 
+        padding: 0px 0px 6vw 0px; 
     }
 
     #bg1 img{
@@ -127,7 +162,6 @@
         right: 0; 
         overflow: hidden; 
         max-width: 100%;
-        z-index: 1;
     }
     
     #bg2 img{
@@ -145,6 +179,53 @@
         left: -110px;  
         overflow: hidden; 
         max-width: 100%;
-        z-index: 1;  
     }
+
+    #bg1, #bg2 {
+        z-index: 1; 
+    }
+    
+    #bg1 img, #bg2 img {
+        pointer-events: none; 
+    }
+
+    #subheading, #feature_grid {
+        z-index: 10; 
+    }
+    
+    #subheading > * {
+        z-index: 10; 
+    }
+    
+    #feature_grid > * {
+        z-index: 10; 
+    }
+
+    #feature_grid {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        padding: 0vw 0vw 17vw 5vw; 
+    }
+
+    #feature {
+        width: 44vw; 
+    }
+
+    #icon {
+        width: 15vw; 
+        height: 15vw;  
+    }
+    
+    #icon svg {    
+        padding: 2vw;   
+    }
+    
+    .heading {
+        font-size: 4vw; 
+    }
+    
+    .text {
+        font-size: 3vw; 
+    }
+    
 }

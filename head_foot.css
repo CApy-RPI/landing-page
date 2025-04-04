@@ -250,7 +250,7 @@
 
     #startbar {
         flex-direction: column;
-        width: 100%;
+        width: min-content;
         justify-content: center;
     }
 

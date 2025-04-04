@@ -1,0 +1,138 @@
+.section {
+    width: 100%; 
+    padding-top: 100px; 
+    background: rgb(61,61,61);
+    background: linear-gradient(180deg, rgb(24, 24, 24) 25%, rgba(0,0,0,1) 39%, rgb(24, 24, 24) 86%);
+    display: wrap;
+    overflow: hidden; 
+    position: relative; 
+    height: 100%; 
+}
+
+html {
+    height: 100%; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#paragraph {
+    text-align: center;
+    width: 70%;
+    margin: auto; 
+    padding: 2vw;   
+}
+
+.heading {
+    color: #67A6BE; 
+    font-family: "Mundial"; 
+    font-weight: 100; 
+    letter-spacing: 0.5em;
+    font-size: 4vw; 
+}
+
+.message {
+    color: white; 
+    font-family: "Tilt Warp";
+    font-weight: 100; 
+    font-size: 4vw; 
+}
+
+.subtext {
+    color: rgb(140, 140, 140);
+    font-family: "Mundial";
+    font-weight: 100; 
+    font-size: 2.3vw;  
+}
+
+
+#bg1 > *, #bg2 > * {
+    z-index: 1; 
+}
+
+
+#bg1 img{
+    width: 50vw; 
+    transform: scaleX(1);
+    opacity: 20%;   
+    max-width: 100%;
+}
+
+#bg1 {
+    height: min-content; 
+    position: absolute; 
+    top: 30px; 
+    left: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+#bg2 img{
+    width: 50vw; 
+    -webkit-transform:rotate(180deg);
+    opacity: 20%;   
+    max-width: 100%;
+}
+
+#bg2 {
+    height: min-content; 
+    position: absolute; 
+    bottom: -20px;  
+    right: -20px;  
+    overflow: hidden; 
+    max-width: 100%; 
+}
+
+
+@media screen and (max-width: 480px) {  /* For mobile devices */
+    .section {
+        height: max-content; 
+    }
+
+    body {
+        height: 100%;  
+    }
+    
+    .sub { 
+        font-size: 6vw; 
+        width: 95%; 
+        padding: 5vw; 
+        margin: 0px; 
+    }
+
+    #subheading {
+        width: 100%; 
+        margin: 0; 
+        padding: 0px 0px 6vw 0px; 
+    }
+
+    #feature_grid {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        padding: 0vw 0vw 17vw 5vw; 
+        z-index: 10;
+    }
+
+    #feature {
+        width: 44vw; 
+    }
+
+    #icon {
+        width: 15vw; 
+        height: 15vw;  
+    }
+    
+    #icon svg {    
+        padding: 2vw;   
+    }
+    
+    .heading {
+        font-size: 4vw; 
+    }
+    
+    .text {
+        font-size: 3vw; 
+    }
+    
+}
