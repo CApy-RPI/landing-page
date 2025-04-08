@@ -68,6 +68,7 @@
   #discord svg{
     align-items: center; 
     height: 2vw; 
+    text-decoration: none;
   }
   
   #discord:hover #discord_icon path {
