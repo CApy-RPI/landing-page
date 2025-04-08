@@ -42,7 +42,8 @@ html {
 #feature_grid {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    padding: 0vw 0vw 17vw 5vw; 
+    padding: 0vw 0vw 17vw 5vw;
+    row-gap: 5vw; 
 }
 
 #feature_grid > * {

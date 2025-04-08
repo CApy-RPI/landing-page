@@ -1,0 +1,75 @@
+.section {
+    width: 100%; 
+    background: rgb(61,61,61);
+    background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgba(0,0,0,1) 14%);
+    display: flex;
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#heading-section {
+    padding-top: 100px; 
+}
+
+#title {
+    text-align: right;
+    margin-left: auto; 
+    display: flex; 
+    flex-direction: column;
+    padding: 10vw 5vw 10vw 0vw; 
+    z-index: 5; 
+}
+
+.head {
+    color: white; 
+    font-family: "Tilt Warp";
+    font-weight: 100; 
+    font-size: 4.5vw;  
+    width: 60vw; 
+    margin: 0; 
+}
+
+.sub {
+    color: rgb(140, 140, 140); 
+    font-family: "Mundial"; 
+    font-weight: 100; 
+    font-size: 2vw; 
+    width: 40vw; 
+    margin-left: auto; 
+    margin-top: 0.5vw; 
+}
+
+#laptop img{
+    width: 90vw; 
+}
+
+#laptop {
+    height: min-content; 
+    position: absolute; 
+    top: 75px; 
+    left: -25vw; 
+    overflow: hidden; 
+    max-width: 100%; 
+    z-index: 1; 
+}
+
+#bg img{
+    width: 50vw; 
+    transform: scaleX(-1);
+    opacity: 20%;   
+    max-width: 100%;
+}
+
+#bg {
+    height: min-content; 
+    position: absolute; 
+    top: 75px; 
+    right: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+

@@ -4,8 +4,8 @@
     padding-bottom: 100px; 
     background: rgb(61,61,61);
     background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgba(0,0,0,1) 25%);
-    display: wrap;
-    overflow: hidden; 
+    display: block;
+    overflow: auto; 
     position: relative; 
     height: 100%; 
 }
@@ -242,6 +242,7 @@ textarea:focus {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%; 
     justify-items: center; 
+    padding: 0 0 3vw 0;
 }
 
 
