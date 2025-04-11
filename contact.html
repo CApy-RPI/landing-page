@@ -40,7 +40,8 @@
         <div class="circle">
             <p class="send_us">Send us a message.</p>
             <div class="form-wrapper">
-            <form action="https://formspree.io/f/mvgkvypj" method="POST" id="form" class="contact-form" novalidate>     
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-form" novalidate>  
+                <input type="hidden" name="access_key" value="9b87400b-6c8e-4bf5-9a4c-4163e49aa7fa">   
                 <div class="form-row">
                 <div class="form-group">
                     <label for="first_name">First Name</label>
@@ -62,7 +63,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required />
+                    <input type="text" name="phone" id="phone" placeholder="+1 (555)-123-5467" required />
                     <div class="feedback">Please provide your phone number.</div>
                 </div>
                 </div>

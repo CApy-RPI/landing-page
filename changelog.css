@@ -1,7 +1,7 @@
 .section {
     width: 100%; 
     background: rgb(61,61,61);
-    background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgba(0,0,0,1) 14%);
+    background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgba(0,0,0,1) 40%);
     display: flex;
     justify-content: center; 
     overflow: hidden; 
@@ -44,22 +44,12 @@
 }
 
 #laptop img{
-    width: 90vw; 
-}
-
-#laptop {
-    height: min-content; 
-    position: absolute; 
-    top: 75px; 
-    left: -25vw; 
-    overflow: hidden; 
-    max-width: 100%; 
-    z-index: 1; 
+    width: 50vw; 
 }
 
 #bg img{
     width: 50vw; 
-    transform: scaleX(-1);
+    transform: scaleX(1);
     opacity: 20%;   
     max-width: 100%;
 }
@@ -67,9 +57,16 @@
 #bg {
     height: min-content; 
     position: absolute; 
-    top: 75px; 
-    right: 0; 
+    top: 5vw; 
+    left: 0; 
     overflow: hidden; 
     max-width: 100%;
 }
 
+#circle {
+    border-radius: 50%; 
+    width: 5vw; 
+    height: 5vw; 
+    border-color: #67A6BE;
+    border-width: 4vw;
+}
