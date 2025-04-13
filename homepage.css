@@ -26,7 +26,7 @@
 
 #hero { 
     width: 100%; 
-    padding: 20vw 0vw 20vw 15vw; 
+    padding: 13vw 0vw 20vw 15vw; 
     margin: auto; 
     z-index: 1; 
 }
@@ -73,14 +73,12 @@
     padding: 8px 20px 12px 20px;
     text-decoration: none;
     border-radius: 10px;
-    transition: background 0.3s ease-in-out;
     text-align: center;
 }
 
 .cta-button:hover {
-    background-color: black;
-    color: white; 
-    box-shadow: inset 0 0 1px 2px white;
+    background-color: rgb(140, 140, 140); 
+    transition: background 0.3s ease-in-out;
 }
 
 .hero-image {
@@ -97,6 +95,7 @@
     overflow: hidden; 
     height: auto; 
 }
+
 
 .why_section {
     width: 100%; 
@@ -194,8 +193,8 @@
     color: white; 
     font-weight: 100;
     font-family: "Tilt Warp";
-    font-size: 60px;
-    width: 25vw; 
+    font-size: 4.5vw;
+    width: 30vw; 
 }
 
 #stats {
@@ -221,7 +220,7 @@
     color: white; 
     font-weight: 100;
     font-family: "Tilt Warp";
-    font-size: 60px; 
+    font-size: 5vw; 
     margin: auto;  
     
 }
@@ -229,7 +228,7 @@
 .caption {
     color: #67A6BE; 
     font-weight: 100;
-    font-size: 30px; 
+    font-size: 2vw; 
     font-family: "Tilt Warp";
     margin: auto; 
 }
@@ -313,7 +312,7 @@
     }
 
     .box {
-        width: 30vw;  
+        width: 40vw;  
     }
 
     .why {
@@ -391,7 +390,7 @@
 
     .box {
         padding: 3vw 6vw 4vw 3vw;
-        width: 40vw; 
+        width: 70vw; 
     }
     
     .box_desc {
@@ -417,5 +416,16 @@
 
     .caption {
         font-size: 20px;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0; 
+        scale: 0.5; 
+    }
+    to {
+        opacity: 1; 
+        scale: 1; 
     }
 }

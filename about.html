@@ -58,14 +58,14 @@
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Jason Zhang</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">zhangy96@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Shamik Karkhanis</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">karkhs@rpi.edu</p>
                 </div>
             </div>
         </div>
@@ -75,49 +75,49 @@
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Vincent Shi</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">shiv@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Pradeep Girl</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">girip@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Zane Brotherton</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">brothz@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Gabriel Conner</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">conneg2@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Tag Ciccone</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">ciccot@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Gianluca Zhang</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">zhangg6@rpi.edu</p>
                 </div>
             </div>
             <div class="profile">
                 <div class="circle"><img src="images/profile.png"></div>
                 <div class="bio">
                     <p class="name">Caleb Alemu</p>
-                    <p class="email">placehold@rpi.edu</p>
+                    <p class="email">cdsalemu78@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -141,5 +141,21 @@
             </a>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <script>
+        const lenis = new Lenis() 
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+    </script>
+    
 </body>
 </html>

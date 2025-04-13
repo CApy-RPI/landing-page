@@ -33,17 +33,17 @@
     
     <section class="section" id="top_section">
         <div id="hero">
-            <p class="subtitle">The ultimate platform for your club</p>
-                <h1 class="slogan">CAPY is the tool for club management.</h1>
-                <p class="description">
-                    Streamlining operations across RPI's numerous student organizations 
-                    to build a smoother, more fulfilling club experience.
-                </p>
-                <a href="#" class="cta-button">Join the Beta</a>
-            </div>
-            <div class="hero-image">
-                <img src="images/phone.png" alt="CAPY app preview">
-            </div>
+            <p class="subtitle">The ultimate platform for your club.</p>
+            <h1 class="slogan">CAPY is the tool for club management.</h1>
+            <p class="description">
+                Streamlining operations across RPI's numerous student organizations 
+                to build a smoother, more fulfilling club experience.
+            </p>
+            <a href="#" class="cta-button">Join the Beta</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/phone.png" alt="CAPY app preview">
+        </div>
     </section>
 
     <section class="section" id="impact">
@@ -115,5 +115,25 @@
             </a>
         </div>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        const lenis = new Lenis() 
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+    </script>
+
 </body>
 </html>

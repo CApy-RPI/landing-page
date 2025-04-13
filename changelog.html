@@ -33,7 +33,7 @@
 
     <section class="section" id="heading-section">
         <div id="title">
-            <h3 class="head"><span style="color: #67A6BE">Changelog.</span> Stay updated on changes and new features.</h3>
+            <h3 class="head"><div class="typewriter"><span style="color: #67A6BE">Changelog.</span></div> Stay updated on changes and new features.</h3>
             <p class="sub">Follow our Github to stay updated on everything we do.</p>
         </div>
         <div id="bg">
@@ -42,9 +42,12 @@
     </section>
 
     <section class="section" id="changes">
+        <div id="temp">
+            CAPY is still under development. Updates will be displayed soon. 
+        </div>
         <div class="update">
             <div class="timeline">
-                <div id="circle">.</div>
+                <div id="circle"></div>
                 <div id="line"></div>
             </div>
             <div class="update_head">
@@ -78,5 +81,20 @@
             </a>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <script>
+        const lenis = new Lenis() 
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+    </script>
 </body>
 </html>

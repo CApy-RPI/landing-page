@@ -63,10 +63,49 @@
     max-width: 100%;
 }
 
-#circle {
-    border-radius: 50%; 
-    width: 5vw; 
-    height: 5vw; 
-    border-color: #67A6BE;
-    border-width: 4vw;
+#changes {
+    display: column; 
+}
+
+#temp {
+    color: white; 
+    font-size: 5vw; 
+    font-family: "Tilt Warp";
+    font-weight: 100; 
+    padding: 20vw; 
+    width: 100%; 
+}
+
+.typewriter {
+    display: flex; 
+    justify-content: right; 
+}
+
+.typewriter span{
+    display: inline; 
+    overflow: hidden;  
+    white-space: nowrap;
+    border-right: white 1px solid; 
+    animation: typing 3s steps(1) forwards, 
+    blink 1s step-end infinite; 
+}
+
+@keyframes typing {
+    0%   { width: 0ch; }
+    10%  { width: 0.9ch; }
+    20%  { width: 1.85ch; }
+    30%  { width: 2.77ch; }
+    40%  { width: 3.69ch; }
+    50%  { width: 4.59ch; }
+    60%  { width: 5.49ch; }
+    70%  { width: 5.88ch; }
+    80%  { width: 6.9ch; }
+    90%  { width: 7.75ch; }
+    100% { width: 10ch; }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; 
+    }
 }
