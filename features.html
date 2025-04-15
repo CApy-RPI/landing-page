@@ -157,12 +157,36 @@
             const splitType = new SplitType(textEl, { types: "words" });
 
             gsap.set(element, { filter: "blur(15px)", autoAlpha: 0 });
+            gsap.set('#feature', { autoAlpha: 0 });
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: element,
                     start: "top 90%",
                 },
+                onComplete: () => {
+                    gsap.utils.toArray('#feature').forEach((box) => {
+                        gsap.fromTo(box,
+                            {
+                                autoAlpha: 0,
+                                y: 50,
+                                filter: "blur(10px)"
+                            },
+                            {
+                                scrollTrigger: {
+                                    trigger: box,
+                                    start: "top 90%",
+                                    end: "top 10%",
+                                },
+                                autoAlpha: 1,
+                                y: 0,
+                                filter: "blur(0px)",
+                                duration: 1,
+                                ease: "power2.out"
+                            }
+                        );
+                    });
+                }
             });
 
             tl.to(element, {
@@ -182,26 +206,6 @@
                 stagger: 0.1
             }, "-=0.6");
         });
-        gsap.utils.toArray('#feature').forEach((box) => {
-        gsap.from(box, {
-            scrollTrigger: {
-                trigger: box,
-                start: "top 90%",  
-                end: "top 10%"
-            },
-            autoAlpha: 0,      
-            y: 50,            
-            filter: "blur(10px)",  
-            duration: 1,
-            ease: "power2.out",
-            onStart: () => { 
-                gsap.set(box, { filter: "blur(10px)", autoAlpha: 0 });
-            },
-            onComplete: () => {
-                gsap.set(box, { filter: "blur(0px)", autoAlpha: 1 });
-            }
-        });
-    });
     </script>
 </body>
 </html>
