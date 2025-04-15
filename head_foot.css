@@ -26,7 +26,13 @@
     z-index: 1000;
     padding: 0 2%;
     box-sizing: border-box;
+    transition: background-color 0.1 ease-in-out;
 }
+
+  #header.scrolled {
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.01 ease-in;
+  }
 
   
   #logo { 

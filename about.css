@@ -63,7 +63,7 @@ html {
 #bg1 {
     height: min-content; 
     position: absolute; 
-    top: 30px; 
+    top: 0px; 
     left: 0; 
     overflow: hidden; 
     max-width: 100%;
