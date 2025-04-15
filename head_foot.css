@@ -66,15 +66,16 @@
     justify-self: right; 
     height: 4w;
     display: grid; 
-    grid-template-columns: 1fr 1fr 2fr; 
+    grid-template-columns: auto 1fr auto; 
     align-items: center;
-    column-gap: 0.1vw; 
+    column-gap: 2.2vw;  
   }
 
   #discord svg{
     align-items: center; 
     height: 2vw; 
     text-decoration: none;
+    margin: auto; 
   }
   
   #discord:hover #discord_icon path {
@@ -85,6 +86,7 @@
   #github svg{
     align-items: center;
     height: 2vw; 
+    margin: auto; 
   }
   
   #github:hover #github_icon path {
@@ -170,16 +172,6 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     column-gap: 5vw; 
-  }
-
-  #startbar {
-    grid-column-start: 3;
-    justify-self: right; 
-    height: 4w;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 2fr; 
-    align-items: center;
-    column-gap: 0.1vw; 
   }
 
   @media screen and (max-width: 1024px) {
