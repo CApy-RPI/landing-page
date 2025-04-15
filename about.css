@@ -1,0 +1,165 @@
+.section {
+    width: 100%; 
+    padding-top: 100px; 
+    padding-bottom: 100px; 
+    background: rgb(61,61,61);
+    background: linear-gradient(180deg, rgb(24, 24, 24) 0%, rgba(0,0,0,1) 25%);
+    display: wrap;
+    overflow: hidden; 
+    position: relative; 
+    height: 100%; 
+}
+
+html {
+    height: 100%; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#paragraph {
+    text-align: center;
+    width: 70%;
+    margin: auto; 
+    padding: 2vw;   
+}
+
+.heading {
+    color: #67A6BE; 
+    font-family: "Mundial"; 
+    font-weight: 100; 
+    letter-spacing: 0.5em;
+    font-size: 4vw; 
+}
+
+.message {
+    color: white; 
+    font-family: "Tilt Warp";
+    font-weight: 100; 
+    font-size: 4vw; 
+}
+
+.subtext {
+    color: rgb(140, 140, 140);
+    font-family: "Mundial";
+    font-weight: 100; 
+    font-size: 2.3vw;  
+}
+
+
+#bg1 > *, #bg2 > * {
+    z-index: 1; 
+}
+
+
+#bg1 img{
+    width: 50vw; 
+    transform: scaleX(1);
+    opacity: 20%;   
+    max-width: 100%;
+}
+
+#bg1 {
+    height: min-content; 
+    position: absolute; 
+    top: 0px; 
+    left: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+#bg2 img{
+    width: 50vw; 
+    -webkit-transform:rotate(180deg);
+    opacity: 20%;   
+    max-width: 100%;
+}
+
+#bg2 {
+    height: min-content; 
+    position: absolute; 
+    bottom: -20px;  
+    right: -20px;  
+    overflow: hidden; 
+    max-width: 100%; 
+}
+
+
+/* the team section */
+#team {
+    padding: 5vw; 
+}
+
+.title {
+    color: white; 
+    font-family: "Tilt Warp"; 
+    font-weight: 100; 
+    font-size: 5vw; 
+    margin: 0; 
+}
+
+.subtitle {
+    color: #67A6BE; 
+    font-family: "Mundial"; 
+    font-weight: 100; 
+    font-size: 3vw; 
+    margin: 0; 
+}
+
+.name {
+    color: white; 
+    font-family: "Tilt Warp";
+    font-weight: 100; 
+    font-size: 3vw; 
+    margin: 0; 
+}
+
+.email {
+    color: #67A6BE; 
+    font-family: "Mundial"; 
+    font-weight: 100; 
+    font-size: 2vw; 
+    margin: 0; 
+}
+
+.circle {
+    width: 10vw; 
+    height: 10vw; 
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 50%;
+    margin-right: 1.5vw; 
+}
+
+.circle img {
+    display: inline; 
+    margin: 0 auto; 
+    height: 100%; 
+    width: auto; 
+}
+
+.bio {
+    padding: 0; 
+    height: min-content;  
+}
+
+.profile { 
+    display: flex; 
+    align-items: center;
+    margin: 3vw 0vw 3vw 0vw; 
+}
+
+.founders {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    width: 100%; 
+}
+
+.contributors {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    width: 100%; 
+}
+
+
