@@ -42,15 +42,15 @@
     </div>
 
     <section class="section">
-        <div id="paragraph">
-            <h3 class="heading">OUR MISSION</h3>
-            <h3 class="message">Create a better club experience across all college campuses.</h3>
-            <p class="subtext">For both club members and club leaders</p>
+        <div id="paragraph" class="reveal_type">
+            <h3 class="heading reveal_text">OUR MISSION</h3>
+            <h3 class="message reveal_text">Create a better club experience across all college campuses.</h3>
+            <p class="subtext reveal_text">For both club members and club leaders</p>
         </div>
-        <div id="paragraph">
-            <h3 class="heading">OUR VISION</h3>
-            <h3 class="message">Make CAPY a tool used by student clubs across the world.</h3>
-            <p class="subtext">Start using CAPY for your club today</p>
+        <div id="paragraph" class="reveal_type">
+            <h3 class="heading reveal_text">OUR VISION</h3>
+            <h3 class="message reveal_text">Make CAPY a tool used by student clubs across the world.</h3>
+            <p class="subtext reveal_text">Start using CAPY for your club today</p>
         </div>
         <div id="bg1">
             <img src="images/stripes.png">
@@ -153,6 +153,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://lcti15.csb.app/blur-in.js"></script>
 
     <script>
         const lenis = new Lenis() 
@@ -165,6 +169,55 @@
             requestAnimationFrame(raf)
         }
         requestAnimationFrame(raf)
+
+        const splitTypes = document.querySelectorAll('.reveal_type');
+
+        splitTypes.forEach((element) => {
+            const textEls = element.querySelectorAll('.reveal_text');
+            const splits = Array.from(textEls).map(textEl => new SplitType(textEl, { types: "words" }));
+
+            gsap.set(element, { filter: "blur(15px)", autoAlpha: 0 });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 90%",
+                },
+            });
+
+            tl.to(element, {
+                autoAlpha: 1,
+                y: -15,
+                filter: "blur(0px)",
+                duration: 1,
+                ease: "power2.out",
+            });
+
+            splits.forEach((split, i) => {
+                tl.from(split.words, {
+                    autoAlpha: 0,
+                    y: 15,
+                    filter: "blur(5px)",
+                    duration: 0.8,
+                    ease: "power2.out",
+                    stagger: 0.05
+                }, `-=${0.5 - i * 0.1}`); 
+            });
+        });
+        gsap.utils.toArray('.profile').forEach((profile, i) => {
+        gsap.from(profile, {
+            scrollTrigger: {
+                trigger: profile,
+                start: "top 95%",
+            },
+            y: 40,
+            autoAlpha: 0,
+            filter: "blur(10px)",
+            duration: 0.8,
+            ease: "power2.out",
+            delay: i * 0.05, // slight natural stagger effect
+        });
+    });
     </script>
     
 </body>
