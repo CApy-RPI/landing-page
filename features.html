@@ -42,8 +42,12 @@
     </div>
 
     <section class="section">
-        <div id="subheading">
-            <h3 class="sub"><span style="color: #67A6BE">CAPY has everything you need</span> to run your club. It's features include...</h3>
+        <div id="subheading" class="reveal_type">
+            <h3 class="sub">
+                <span class="reveal_text">
+                <span style="color: #67A6BE">CAPY has everything you need</span> to run your club. It's features include...
+                </span>
+            </h3>
         </div>
         <div id="feature_grid">
             <div id="feature">
@@ -129,6 +133,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://lcti15.csb.app/blur-in.js"></script>
 
     <script>
         const lenis = new Lenis() 
@@ -141,6 +149,63 @@
             requestAnimationFrame(raf)
         }
         requestAnimationFrame(raf)
+
+        const splitTypes = document.querySelectorAll('.reveal_type');
+
+        splitTypes.forEach((element) => {
+            const textEl = element.querySelector('.reveal_text');
+            const splitType = new SplitType(textEl, { types: "words" });
+
+            gsap.set(element, { filter: "blur(15px)", autoAlpha: 0 });
+            gsap.set('#feature', { autoAlpha: 0 });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 90%",
+                },
+                onComplete: () => {
+                    gsap.utils.toArray('#feature').forEach((box) => {
+                        gsap.fromTo(box,
+                            {
+                                autoAlpha: 0,
+                                y: 50,
+                                filter: "blur(10px)"
+                            },
+                            {
+                                scrollTrigger: {
+                                    trigger: box,
+                                    start: "top 90%",
+                                    end: "top 10%",
+                                },
+                                autoAlpha: 1,
+                                y: 0,
+                                filter: "blur(0px)",
+                                duration: 1,
+                                ease: "power2.out"
+                            }
+                        );
+                    });
+                }
+            });
+
+            tl.to(element, {
+                autoAlpha: 1,
+                x: 0,
+                filter: "blur(0px)",
+                duration: 1,
+                ease: "power2.out",
+            });
+
+            tl.from(splitType.words, {
+                autoAlpha: 0,
+                x: -20,
+                filter: "blur(5px)",
+                duration: 0.8,
+                ease: "power2.out",
+                stagger: 0.1
+            }, "-=0.6");
+        });
     </script>
 </body>
 </html>
