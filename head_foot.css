@@ -1,278 +1,174 @@
-   body {
-    margin: 0px; 
-    padding: 0px; 
-    background-color: black; 
-  }
-  
-  .area { 
-    width: 100%;
-    height: 100%;  
-    padding: 0px;
-    margin: 0px;
-    display: grid;
-  }
-  
-  #header {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    position: fixed; 
-    align-items: center;
-    height: 120px; 
-    background-color: black;
-    width: 100%; 
-    max-width: 100vw;
-    padding: 0 2%;
-    z-index: 1000; 
-    top: 0; 
-    left: 0; 
+:root {
+    --bg-dark: #050505;
+    --bg-light: #111111;
+    --accent: #f5f5f5;
+    --accent-soft: rgba(245, 245, 245, 0.12);
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
+    --max-width: 1080px;
+    --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    --transition: all 0.2s ease;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
     box-sizing: border-box;
-    transition: background-color 0.01 ease-in-out;
+    margin: 0;
+    padding: 0;
 }
 
-  #header.scrolled {
-    background-color: rgba(0, 0, 0, 0.5); 
-    transition: background-color 0.01 ease-in;
-  }
+body {
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 45%),
+                radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 40%),
+                var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
 
-  
-  #logo { 
-    position: relative;
-    height: 4vw;
-    grid-column-start: 1;  
-  }
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 120px 24px 64px;
+}
 
-  #logo_container {
-    width: min-content; 
-  }
-  
-  #navbar {  
-    margin: auto; 
-    justify-self: center;
-    width: min-content  ; 
-    height: 5vw; 
-    display: grid; 
-    justify-content: center;
+.area {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+}
+
+header {
+    backdrop-filter: blur(14px);
+    background: rgba(10, 10, 10, 0.82);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    left: 0;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    font-family: "mundial", sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    column-gap: 4vw;
-    grid-column-start: 2;  
-  }
+    display: flex;
+    gap: 28px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
 
-  #startbar {
-    grid-column-start: 3;
-    justify-self: right; 
-    height: 50px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
+#logo {
+    height: 48px;
+    width: auto;
+}
+
+nav {
     align-items: center;
-    column-gap: 5vw;   
-  }
+    display: flex;
+    gap: 16px;
+}
 
-  #discord svg{
-    align-items: center; 
-    height: 2vw; 
+nav a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px 14px;
     text-decoration: none;
-    margin: auto; 
-  }
-  
-  #discord:hover #discord_icon path {
-    transition: fill 0.3s ease-in-out;
-    fill: rgb(140, 140, 140); 
-  }
+    border-radius: 999px;
+    transition: var(--transition);
+}
 
-  #github svg{
-    align-items: center;
-    height: 2vw; 
-    margin: auto; 
-  }
-  
-  #github:hover #github_icon path {
-    transition: fill 0.3s ease-in-out;
-    fill: rgb(140, 140, 140); 
-  }
+nav a:hover,
+nav a:focus {
+    background: rgba(245, 245, 245, 0.08);
+    color: var(--text-primary);
+}
 
-#start {
-    background-color: #67A6BE;
-    border-radius: 1mm;
-    display: inline-block; 
-    text-align: center;
-    transition: background 0.3s ease-in-out;
-    white-space: nowrap;
+nav a.active {
+    background: rgba(245, 245, 245, 0.16);
+    color: var(--text-primary);
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #f5f5f5, #d9d9d9);
+    border: none;
+    border-radius: 999px;
+    color: #050505;
     cursor: pointer;
-    color:#ffffff;
-    font-family: "mundial", san-serif;
-    font-weight: 100; 
-    font-size: 1vw;
-    padding: 0.5vw;
-    width: 8vw;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 20px;
     text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-#start:hover {
-    transition: background 0.3s ease-in-out;
-    background-color:#4d798a;
+
+.cta-button:hover,
+.cta-button:focus {
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
 }
-  
-  #page {
-    color: white; 
-    font-weight: 100; 
-    font-size: 1.2vw; 
-    text-align: center; 
-    text-decoration: none;
-    width: min-content;
-    height: min-content; 
-    white-space: nowrap; 
-  }
 
-  #page:hover {
-    transition: color 0.3s ease-in-out;
-    color: rgb(140, 140, 140);
-  }
-  
-  .active {
-    font-weight: 200;
-    border-bottom: 1px solid #67A6BE;
-  }
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 120px;
+    padding: 32px 24px 48px;
+}
 
-  #home {
-    color: #67A6BE; 
-    font-weight: 100; 
-    font-size: 1.2vw; 
-    text-align: center; 
-    text-decoration: none;
-    width: min-content;
-    height: min-content; 
-  }
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
 
-  #home:hover {
-    transition: color 0.3s ease-in-out;
-    color: #4d798a;
-  }
-
-  
-
-  #footer {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    position: absolute; 
+.footer-meta {
     align-items: center;
-    height: 120px; 
-    background-color: black;
-    box-shadow: 0 -0.2px 0 white;
-    width: 100%; 
-    max-width: 100vw;
-    padding: 0 2%;
-    box-sizing: border-box;  
-  }
-
-  #bottomstartbar {
-    grid-column-start: 3;
-    justify-self: right; 
-    height: 50px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    column-gap: 5vw; 
-  }
-
-  @media screen and (max-width: 1024px) {
-    #header {
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
-      text-align: center;
-    }
-
-    #navbar {
-        flex-direction: column;
-        width: 100%;
-        gap: 3.5vw;
-    }
-
-    #bottomstartbar, #startbar {
-        justify-content: center;
-        gap: 3vw;
-    }
-
-    #footer {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        text-align: center;
-    }
-
-    #page, #home {
-      font-size: 1.5vw; 
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-top: 12px;
 }
 
-@media screen and (max-width: 768px) {
-    #header {
-      flex-direction: column;
-      height: auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    #navbar {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-        gap: 3vw; 
-    }
-
-    #bottomstartbar, #startbar {
-        flex-direction: column;
-        gap: 3vw;
-        justify-content: center;
-    }
-
-    #footer {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        text-align: center;
-    }
-
-    #home, #page {
-      font-size: 2vw; 
-    }
+footer nav {
+    gap: 12px;
 }
 
-@media screen and (max-width: 480px) {
-    #header {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 10px;
-        position: fixed; 
-        width: 480px; 
+footer nav a {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+}
+
+small {
+    color: rgba(245, 245, 245, 0.64);
+}
+
+@media (max-width: 768px) {
+    main {
+        gap: 64px;
+        padding: 96px 20px 56px;
     }
 
-    #navbar {
-        flex-direction: column;
-        width: 100%;
-        gap: 8px;
+    header {
+        padding: 14px 18px;
     }
 
-    #bottomstartbar, #startbar {
-        flex-direction: column;
-        width: min-content;
-        justify-content: center;
+    .header-inner {
+        gap: 20px;
     }
 
-    #footer {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        text-align: center;
+    nav {
+        display: none;
     }
 
-    #page, #home {
-      font-size: 2.5vw; 
+    .cta-button {
+        padding: 10px 18px;
+    }
+
+    footer nav {
+        flex-wrap: wrap;
     }
 }
-  
-  
