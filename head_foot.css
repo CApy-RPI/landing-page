@@ -1,37 +1,10 @@
-:root {
-    --bg-dark: #050505;
-    --bg-light: #111111;
-    --accent: #f5f5f5;
-    --accent-soft: rgba(245, 245, 245, 0.12);
-    --text-primary: #f5f5f5;
-    --text-secondary: #a3a3a3;
-    --max-width: 1080px;
-    --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-    --transition: all 0.2s ease;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 45%),
-                radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 40%),
-                var(--bg-dark);
-    color: var(--text-primary);
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
-}
+/* Global variables and resets are defined in global.css */
 
 main {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    padding: 120px 24px 64px;
+    padding: 84px 24px 64px;
 }
 
 .area {
@@ -82,17 +55,17 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    background: rgba(245, 245, 245, 0.08);
+    background: var(--accent-08);
     color: var(--text-primary);
 }
 
 nav a.active {
-    background: rgba(245, 245, 245, 0.16);
+    background: var(--accent-16);
     color: var(--text-primary);
 }
 
 .cta-button {
-    background: linear-gradient(135deg, #f5f5f5, #d9d9d9);
+    background: linear-gradient(135deg, var(--accent), var(--accent));
     border: none;
     border-radius: 999px;
     color: #050505;
@@ -149,7 +122,7 @@ small {
 @media (max-width: 768px) {
     main {
         gap: 64px;
-        padding: 96px 20px 56px;
+        padding: 72px 20px 56px;
     }
 
     header {

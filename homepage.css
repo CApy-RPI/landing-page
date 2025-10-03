@@ -1,5 +1,5 @@
 .hero {
-    align-items: center;
+    align-items: start;
     display: grid;
     gap: 48px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -14,8 +14,8 @@
 
 .hero-flag {
     align-items: center;
-    background: rgba(245, 245, 245, 0.05);
-    border: 1px solid rgba(245, 245, 245, 0.16);
+    background: var(--accent-05);
+    border: 1px solid var(--accent-16);
     border-radius: 999px;
     color: var(--accent);
     display: inline-flex;
@@ -63,7 +63,7 @@ h1 {
     width: 100%;
 }
 .hero-badge {
-    background: rgba(245, 245, 245, 0.1);
+    background: var(--accent-10);
     border-radius: 14px;
     color: var(--accent);
     font-size: 0.85rem;
@@ -74,7 +74,7 @@ h1 {
 
 .section {
     background: rgba(17, 17, 17, 0.85);
-    border: 1px solid rgba(245, 245, 245, 0.08);
+    border: 1px solid var(--accent-08);
     border-radius: 28px;
     box-shadow: var(--shadow);
     padding: 48px;
@@ -105,7 +105,7 @@ h1 {
 
 .feature-card {
     background: rgba(12, 12, 12, 0.92);
-    border: 1px solid rgba(245, 245, 245, 0.1);
+    border: 1px solid var(--accent-10);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -115,12 +115,12 @@ h1 {
 }
 
 .feature-card:hover {
-    border-color: rgba(245, 245, 245, 0.35);
+    border-color: var(--accent-35);
     transform: translateY(-4px);
 }
 
 .feature-icon {
-    background: rgba(245, 245, 245, 0.12);
+    background: var(--accent-12);
     border-radius: 14px;
     height: 44px;
     width: 44px;
@@ -141,7 +141,7 @@ h1 {
 
 .callout {
     align-items: center;
-    background: linear-gradient(135deg, rgba(245, 245, 245, 0.18), rgba(217, 217, 217, 0.14));
+    background: linear-gradient(135deg, rgba(222, 189, 189, 0.18), rgba(217, 217, 217, 0.14));
     border-radius: 24px;
     display: grid;
     gap: 32px;
@@ -190,7 +190,7 @@ h1 {
 .metric {
     background: rgba(15, 15, 15, 0.82);
     border-radius: 18px;
-    border: 1px solid rgba(245, 245, 245, 0.12);
+    border: 1px solid var(--accent-12);
     padding: 24px;
 }
 
