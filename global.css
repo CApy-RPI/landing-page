@@ -70,6 +70,8 @@
     --max-width: 1080px;
     --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
     --transition: all 0.2s ease;
+    /* Sticky header height reference */
+    --header-height: 84px;
     font-family: var(--font-family);
 }
 
@@ -87,4 +89,26 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
+}
+
+/* Smooth anchor scrolling and nicer snap transitions */
+html {
+    scroll-behavior: smooth;
+    /* Make the viewport the snap container */
+    scroll-snap-type: y proximity;
+    /* Offset native anchor and snap positions by header height */
+    scroll-padding-top: var(--header-height);
+}
+
+/* Temporarily disable snapping (toggled via JS during load) */
+html.no-snap { scroll-snap-type: none !important; }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }

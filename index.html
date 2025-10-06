@@ -12,6 +12,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/mark_light.png">
+    <script>
+        // Ensure reload returns to top unless a hash is present
+        try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch {}
+        // Disable snapping during initial load to avoid mid-page jumps
+        document.documentElement.classList.add('no-snap');
+        window.addEventListener('pageshow', () => {
+            const hasHash = !!location.hash;
+            if (!hasHash) {
+                window.scrollTo(0, 0);
+            }
+            // Re-enable snapping shortly after paint
+            setTimeout(() => document.documentElement.classList.remove('no-snap'), 120);
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -32,7 +46,7 @@
     <main id="top">
         <section class="area hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <h1 id="hero-title">More engaged members. Fewer logistics.</h1>
+                <h1 id="hero-title">CAPY - more engaged members, fewer logistics.</h1>
                 <p class="hero-subtitle">Built at RPI, CAPY gives campus teams a simple system for meetings, projects, and communications.</p>
                 <div class="hero-actions">
                     <a class="cta-button" href="https://github.com/CApy-RPI">Explore the code</a>
@@ -107,7 +121,7 @@
             <div class="callout-copy">
                 <h2>Grow impact, cut the busywork</h2>
                 <p><strong>CAPY is actively looking for testers, designers, and developers.</strong> Join the Discord to connect with the team, propose new ideas, and see how clubs around campus are running on CAPY.</p>
-                <a class="cta-button" href="https://discord.gg/">Join the Discord</a>
+                <a class="cta-button" href="https://discord.gg/WkYEgCnYVw">Join the Discord</a>
             </div>
             <div class="callout-copy">
                 <h3>Get started today</h3>
@@ -127,7 +141,7 @@
                 <a href="#contact">Contact</a>
             </nav>
             <div class="footer-meta">
-                <small>© <span id="year"></span> CAPY at Rensselaer Polytechnic Institute. Built by students for student.</small>
+                <small>© <span id="year"></span> CAPY at Rensselaer Polytechnic Institute. Built by students for students.</small>
                 <a class="cta-button" href="https://github.com/CApy-RPI">Contribute</a>
             </div>
         </div>
@@ -138,6 +152,35 @@
         if (yearEl) {
             yearEl.textContent = new Date().getFullYear();
         }
+        // Center target sections in viewport on in-page navigation
+        function scrollToHashCenter(hash) {
+            const id = (hash || '').replace('#','');
+            if (!id) return;
+            const el = document.getElementById(id);
+            if (el && typeof el.scrollIntoView === 'function') {
+                // Always align to start so content sits below sticky header
+                el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            }
+        }
+
+        // Intercept in-page anchor clicks (including nav and CTAs)
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const href = a.getAttribute('href');
+            // Ignore empty or just '#'
+            if (!href || href === '#') return;
+            // If same-page hash, smooth center scroll
+            e.preventDefault();
+            scrollToHashCenter(href);
+            // Update URL hash without jumping
+            history.replaceState(null, '', href);
+        });
+
+        // If landing with a hash, center that section after load (including bfcache restores)
+        const centerIfHash = () => { if (location.hash) scrollToHashCenter(location.hash); };
+        window.addEventListener('DOMContentLoaded', centerIfHash);
+        window.addEventListener('pageshow', centerIfHash);
     </script>
 </body>
 </html>
