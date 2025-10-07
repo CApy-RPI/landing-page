@@ -91,6 +91,23 @@ body {
     min-height: 100vh;
 }
 
+/* Decorative background image layer (under content) */
+.bg-arcs {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url('images/stripes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+}
+
+@media (max-width: 768px) {
+    .bg-arcs { opacity: 0.18; }
+}
+
 /* Smooth anchor scrolling and nicer snap transitions */
 html {
     scroll-behavior: smooth;
