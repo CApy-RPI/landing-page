@@ -80,7 +80,7 @@ h1 {
 }
 
 .hero-visual img {
-    border-radius: 16px;
+    border-radius: 5px;
     box-shadow: var(--shadow);
     width: 100%;
 }
