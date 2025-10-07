@@ -31,7 +31,9 @@ header {
 }
 
 /* Ensure content layers above decorative background image */
-header, main, footer { position: relative; z-index: 1; }
+main, footer { position: relative; z-index: 1; }
+/* Keep header on top of everything */
+header { z-index: 200; }
 
 .header-inner {
     align-items: center;
