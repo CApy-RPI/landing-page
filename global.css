@@ -120,6 +120,12 @@ html {
 /* Temporarily disable snapping (toggled via JS during load) */
 html.no-snap { scroll-snap-type: none !important; }
 
+/* On small screens, disable scroll snapping to avoid
+   unintended snap-back to the hero during anchor navigation */
+@media (max-width: 768px) {
+    html { scroll-snap-type: none; }
+}
+
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
