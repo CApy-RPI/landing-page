@@ -108,18 +108,6 @@ body {
     .bg-arcs { opacity: 0.18; }
 }
 
-/* Smooth anchor scrolling and nicer snap transitions */
-html {
-    scroll-behavior: smooth;
-    /* Make the viewport the snap container */
-    scroll-snap-type: y proximity;
-    /* Offset native anchor and snap positions by header height */
-    scroll-padding-top: var(--header-height);
-}
-
-/* Temporarily disable snapping (toggled via JS during load) */
-html.no-snap { scroll-snap-type: none !important; }
-
 /* On small screens, disable scroll snapping to avoid
    unintended snap-back to the hero during anchor navigation */
 @media (max-width: 768px) {
