@@ -4,220 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPY | Club Assistant in python</title>
-    <link href="homepage.css" rel="stylesheet">
-    <link href="head_foot.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
-    <link href="https://use.typekit.net/bdw6heq.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>CAPY | Club Assistant in Python</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="head_foot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/mark_light.png">
-    <script>
-        window.addEventListener('scroll', function() {
-          const header = document.getElementById('header');
-          if (window.scrollY > 0) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
-        });
-      </script>
+    
 </head>
 <body>
-    <div id="header" class="area">
-        <a href="index.html" id="logo_container"><img id="logo" src="images/capy_logo.png"></a>
-        <div id="navbar">
-            <a href="index.html" id="home" class="active">Home</a>
-            <a href="features.html" id="page">Features</a>
-            <a href="changelog.html" id="page">Changelog</a>
-            <a href="about.html" id="page">About Us</a>
-            <a href="contact.html" id="page">Contact</a>
-        </div>
-        <div id="startbar">
-            <a id="discord" href=""> 
-                <svg id="discord_icon" width="28px" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#ffffff" fill-rule="nonzero"> </path> </g> </g></svg>
+    <!-- Decorative background arcs -->
+    <div class="bg-arcs" aria-hidden="true"></div>
+    <header>
+        <div class="header-inner">
+            <a href="#top" aria-label="CAPY home">
+                <img id="logo" src="images/capy_logo.png" alt="CAPY logo">
             </a>
-            <a id="github" href="https://github.com/CApy-RPI">
-                <svg id="github_icon" width="28px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#ffffff]"> </path> </g> </g> </g> </g></svg>
-            </a>
-             <!-- <a href="#" id="start">Get Started</a> -->
+            <nav aria-label="Primary">
+                <a class="active" href="#top">Overview</a>
+                <a href="#features">Features</a>
+                <a href="#platform">Platform</a>
+                <a href="#contact">Get Involved</a>
+            </nav>
+            <a class="cta-button" href="https://github.com/CApy-RPI">View on GitHub</a>
         </div>
-    </div>
-    
-    <section class="section" id="top_section">
-        <div id="hero">
-            <p class="subtitle reveal_type"><span class="reveal_text">The ultimate platform for your club.</span></p>
-            <h1 class="slogan reveal_type "><span class="reveal_text">CAPY is the tool for club management.</span></h1>
-            <p class="description reveal_type">
-                <span class="reveal_text">Streamlining operations across RPI's numerous student organizations 
-                to build a smoother, more fulfilling club experience.</span>
-            </p>
-            <!-- <a href="#" class="cta-button reveal_type">
-                Join the Beta
-              </a> -->
-        </div>
-        <div class="hero-image">
-            <img src="images/phone.png" alt="CAPY app preview">
-        </div>
-    </section>
-  
-    <!-- <section class="section" id="impact">
-        <div id="stats">
-            <h3 class="stat_sub reveal_type">Who is using <br> CAPY...</h3>
-                <div class="stat reveal_type">
-                    <h3 class="number">150 <br> </h3>
-                    <p class="caption">Clubs</p>
+    </header>
+
+    <main id="top">
+        <section class="area hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <h1 id="hero-title">CAPY - engaged members, simple logistics.</h1>
+                <p class="hero-subtitle">Built at RPI, CAPY gives campus teams a clean system for meetings, projects, and communications.</p>
+                <div class="hero-actions">
+                    <a class="cta-button" href="https://github.com/CApy-RPI">Explore the code</a>
+                    <a class="cta-button" href="#contact">Join the community</a>
                 </div>
-                <div class="stat reveal_type">
-                    <h3 class="number">2000+ <br> </h3>
-                    <p class="caption">Users</p>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-badge">Automate club operations</div>
+                <img src="images/hero1.png" alt="Illustration of CAPY dashboard">
+                <div class="metrics">
+                    <div class="metric">
+                        <span>XX</span>
+                        <p>students registered on CAPY (coming soon).</p>
+                    </div>
+                    <div class="metric">
+                        <span>XX</span>
+                        <p>clubs using CAPY (coming soon).</p>
+                    </div>
                 </div>
-                <div id="colleges" class="stat reveal_type">
-                    <h3 class="number">15 <br> </h3>
-                    <p class="caption">Colleges</p>
-                </div>
-        </div>
-        <div id="bg">
-            <img src="images/stripes.png">
-        </div>
-    </section> -->
-
-    <section class="why_section">
-        <div class="why reveal_type">
-            <p class="why_sub">WHY USE CAPY?</p>
-            <h1 class="why_slogan">CAPY has all the tools and features that makes managing a club a breeze.</h1>
-            <p class="why_desc">Here's some reasons why it'll help your club</p>
-        </div>
-        <div class="boxes">
-            <div class="box">
-                <svg id="discord_icon" width="28px" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#ffffff" fill-rule="nonzero"> </path> </g> </g></svg>
-                <h3 class="box_head">Discord Integrated</h3>
-                <p class="box_desc">An effortless addition to any <br><span>club Discord server</span></p>
-                <a class="learn_more" href="#">Learn More ></a>
             </div>
+        </section>
 
-            <div class="box">
-                <svg width="28px" viewBox="-2.84 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:29.695999999999998;}</style> </defs> <g data-name="Layer 2" id="Layer_2"> <g data-name="E404, gear, Media, media player, multimedia" id="E404_gear_Media_media_player_multimedia"> <path class="cls-1" d="M373.59,340.89V299.52a18.84,18.84,0,0,0-18.84-18.84H333.48A18.92,18.92,0,0,1,316,268.91l-.1-.24a19,19,0,0,1,4-20.71l15-15a18.83,18.83,0,0,0,0-26.64L305.72,177a18.83,18.83,0,0,0-26.64,0l-15,15a19,19,0,0,1-20.71,4l-.24-.1a18.92,18.92,0,0,1-11.77-17.46V157.25a18.84,18.84,0,0,0-18.84-18.84H171.11a18.84,18.84,0,0,0-18.84,18.84v21.27A18.92,18.92,0,0,1,140.5,196l-.24.1a19,19,0,0,1-20.71-4l-15-15a18.83,18.83,0,0,0-26.64,0L48.62,206.28a18.83,18.83,0,0,0,0,26.64l15,15a19,19,0,0,1,4,20.71l-.1.24a18.92,18.92,0,0,1-17.46,11.77H28.84A18.84,18.84,0,0,0,10,299.52v41.37a18.84,18.84,0,0,0,18.84,18.84H50.11A18.92,18.92,0,0,1,67.57,371.5l.1.24a19,19,0,0,1-4,20.71l-15,15a18.83,18.83,0,0,0,0,26.64l29.25,29.25a18.83,18.83,0,0,0,26.64,0l15-15a19,19,0,0,1,20.71-4l.24.1a18.92,18.92,0,0,1,11.77,17.46v21.27A18.84,18.84,0,0,0,171.11,502h41.37a18.84,18.84,0,0,0,18.84-18.84V461.89a18.92,18.92,0,0,1,11.77-17.46l.24-.1a19,19,0,0,1,20.71,4l15,15a18.83,18.83,0,0,0,26.64,0L335,434.13a18.83,18.83,0,0,0,0-26.64l-15-15a19,19,0,0,1-4-20.71l.1-.24a18.92,18.92,0,0,1,17.46-11.77h21.27A18.84,18.84,0,0,0,373.59,340.89Z"></path> <circle class="cls-1" cx="191.8" cy="320.2" r="74.8"></circle> <path class="cls-1" d="M207.45,138.41V138a15,15,0,0,1,15-15h16.9a15,15,0,0,0,13.88-9.35c0-.06.05-.13.08-.19A15.06,15.06,0,0,0,250.09,97l-12-11.94a15,15,0,0,1,0-21.17l23.24-23.24a15,15,0,0,1,21.16,0l11.95,12a15.07,15.07,0,0,0,16.45,3.18l.19-.08a15,15,0,0,0,9.36-13.88V25a15,15,0,0,1,15-15h32.87a15,15,0,0,1,15,15v16.9a15,15,0,0,0,9.35,13.88l.18.08a15.09,15.09,0,0,0,16.46-3.18l12-12a15,15,0,0,1,21.16,0l23.24,23.24a15,15,0,0,1,0,21.17L453.68,97a15.05,15.05,0,0,0-3.17,16.46l.07.19A15,15,0,0,0,464.45,123h16.9a15,15,0,0,1,15,15v32.86a15,15,0,0,1-15,15h-16.9a15,15,0,0,0-13.87,9.36l-.07.18a15,15,0,0,0,3.17,16.46l11.95,11.95a15,15,0,0,1,0,21.16l-23.24,23.24a15,15,0,0,1-21.16,0l-12-11.95a15,15,0,0,0-16.46-3.18l-.18.07A15,15,0,0,0,383.29,267v16.9a15,15,0,0,1-9.77,14"></path> <circle class="cls-1" cx="351.88" cy="154.43" r="48.69"></circle> </g> </g> </g></svg>
-                <h3 class="box_head">Automated & Streamline</h3>
-                <p class="box_desc">Monotonous tasks are <br> automatically done for you</p>
-                <a class="learn_more" href="features.html">Learn More ></a>
+        <section class="area section" id="features" aria-labelledby="features-title">
+            <div class="section-header">
+                <h2 class="section-title" id="features-title">Features that let student leaders focus on impact</h2>
+                <p class="section-lead">CAPY streamlines the operational tasks that eat up your time so teams can concentrate on building community, running events, and celebrating wins.</p>
             </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Smart Scheduling</h3>
+                    <p>Coordinate meetings with availability tracking and automated reminders tailored to your roster.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📣</div>
+                    <h3>Member Updates</h3>
+                    <p>Broadcast announcements via email or Discord to keep everyone aligned before big events.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Insights</h3>
+                    <p>Track initiatives at-a-glance with dashboards that show task owners, blockers, and next steps.</p>
+                </article>
+            </div>
+        </section>
 
-            <div class="box">
-                <svg viewBox="0 0 24 24" width="28px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.24999 18L5.24999 20.25V15.75H2.25C1.85217 15.75 1.47064 15.5919 1.18934 15.3106C0.908034 15.0293 0.749999 14.6478 0.749999 14.25V2.25C0.749999 1.85217 0.908034 1.47064 1.18934 1.18934C1.47064 0.908034 1.85217 0.749999 2.25 0.749999H18.75C19.1478 0.749999 19.5293 0.908034 19.8106 1.18934C20.0919 1.47064 20.25 1.85217 20.25 2.25V6.71484" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M5.24999 5.24999H15.75" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M5.24999 9.74999H8.24999" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M23.25 18.75H20.25V23.25L15.75 18.75H11.25V9.74999H23.25V18.75Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M19.5 15H15" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                <h3 class="box_head">We Hear You</h3>
-                <p class="box_desc">If you have any feedback, we <br> wanna hear it</p>
-                <a class="learn_more" href="contact.html">Learn More ></a>
+        <section class="area section" id="platform" aria-labelledby="platform-title">
+            <div class="section-header">
+                <h2 class="section-title" id="platform-title">Built for campus teams, ready for customization</h2>
+                <p class="section-lead">Whether you lead a design club or a competitive robotics team, CAPY adapts to how you already work.</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Modular tooling</h3>
+                    <p>Enable only the workflows your club needs: meeting planning, project management, finance, and more.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Python powered</h3>
+                    <p>Extend CAPY with Python scripts, integrations, and plugins that speak your club’s language.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Open community</h3>
+                    <p>Collaborate with contributors at RPI and beyond to shape roadmaps, raise issues, and share wins.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="area callout" id="contact">
+            <div class="callout-copy">
+                <h2>Grow impact, cut the busywork</h2>
+                <p><strong>CAPY is actively looking for testers, designers, and developers.</strong> Join the Discord to connect with the team, propose new ideas, and see how clubs around campus are running on CAPY.</p>
+                <a class="cta-button" href="https://discord.gg/WkYEgCnYVw">Join the Discord</a>
+            </div>
+            <div class="callout-copy">
+                <h3>Get started today</h3>
+                <p>Clone the project, run it locally, and customize dashboards to match your club’s goals. We’ve documented the full setup so you can start tracking projects and meetings in minutes.</p>
+                <a class="cta-button" href="https://github.com/CApy-RPI">Read the docs</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <img src="images/capy_logo.png" alt="CAPY logo" width="120" height="auto">
+            <nav aria-label="Footer">
+                <a href="#top">Home</a>
+                <a href="#features">Features</a>
+                <a href="#platform">Platform</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-meta">
+                <small>© <span id="year"></span> CAPY at Rensselaer Polytechnic Institute. Built by students for students.</small>
+                <a class="cta-button" href="https://github.com/CApy-RPI">Contribute</a>
             </div>
         </div>
-    </section>
-
-    <div id="footer" class="area">
-        <a href="index.html" id="logo_container"><img id="logo" src="images/capy_logo.png"></a>
-        <div id="navbar">
-            <a href="index.html" id="home" class="active">Home</a>
-            <a href="features.html" id="page">Features</a>
-            <a href="changelog.html" id="page">Changelog</a>
-            <a href="about.html" id="page">About Us</a>
-            <a href="contact.html" id="page">Contact</a>
-        </div>
-        <div id="bottomstartbar">
-            <a id="discord" href=""> 
-                <svg id="discord_icon" width="28px" viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#ffffff" fill-rule="nonzero"> </path> </g> </g></svg>
-            </a>
-            <a id="github" href="https://github.com/CApy-RPI">
-                <svg id="github_icon" width="28px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#ffffff]"> </path> </g> </g> </g> </g></svg>
-            </a>
-        </div>
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://lcti15.csb.app/blur-in.js"></script>
+    </footer>
 
     <script>
-        const lenis = new Lenis() 
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
         }
-        requestAnimationFrame(raf)
-
-
-        const splitTypes = document.querySelectorAll('.reveal_type');
-
-        splitTypes.forEach((element) => {
-        const textEl = element.querySelector('.reveal_text');
-        const splitType = new SplitType(textEl, { types: "words" });
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: "top 90%", 
-            },
-            onComplete: () => {
-                gsap.to('.hero-image img', {
-                    autoAlpha: 1,
-                    x: 0, 
-                    y: 0,
-                    filter: "blur(0px)", 
-                    duration: 1,
-                    ease: "power2.out"
-                });
-            }
-        });
-
-        tl.from(element, {
-            autoAlpha: 0,
-            x: -50,
-            filter: "blur(10px)",
-            duration: 1,
-            ease: "power2.out",
-        });
-
-        tl.from(splitType.words, {
-            autoAlpha: 0,
-            x: -20,
-            filter: "blur(5px)",
-            duration: 0.8,
-            ease: "power2.out",
-            stagger: 0.1
-        }, "-=0.6"); 
-
-        gsap.set('.hero-image img', {
-            filter: "blur(15px)", 
-            autoAlpha: 0, 
-            x: 50,
-            y: -50,
-        });    
-    });
-    gsap.utils.toArray('.box').forEach((box) => {
-        gsap.from(box, {
-            scrollTrigger: {
-                trigger: box,
-                start: "top 90%",  
-                end: "top 10%"
-            },
-            autoAlpha: 0,      
-            y: 50,            
-            filter: "blur(10px)",  
-            duration: 1,
-            ease: "power2.out",
-            onStart: () => { 
-                gsap.set(box, { filter: "blur(10px)", autoAlpha: 0 });
-            },
-            onComplete: () => {
-                gsap.set(box, { filter: "blur(0px)", autoAlpha: 1 });
-            }
-        });
-    });
+        // Hash navigation uses native behavior with CSS smooth scrolling
     </script>
-
 </body>
 </html>
