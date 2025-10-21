@@ -75,6 +75,9 @@
     font-family: var(--font-family);
 }
 
+/* Native smooth scrolling for in-page anchors */
+html { scroll-behavior: smooth; }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -113,6 +116,9 @@ body {
 @media (max-width: 768px) {
     html { scroll-snap-type: none; }
 }
+
+/* Offset anchor targets to account for sticky header */
+[id] { scroll-margin-top: var(--header-height); }
 
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {

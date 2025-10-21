@@ -12,20 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/mark_light.png">
-    <script>
-        // Ensure reload returns to top unless a hash is present
-        try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch {}
-        // Disable snapping during initial load to avoid mid-page jumps
-        document.documentElement.classList.add('no-snap');
-        window.addEventListener('pageshow', () => {
-            const hasHash = !!location.hash;
-            if (!hasHash) {
-                window.scrollTo(0, 0);
-            }
-            // Re-enable snapping shortly after paint
-            setTimeout(() => document.documentElement.classList.remove('no-snap'), 120);
-        });
-    </script>
+    
 </head>
 <body>
     <!-- Decorative background arcs -->
@@ -154,35 +141,7 @@
         if (yearEl) {
             yearEl.textContent = new Date().getFullYear();
         }
-        // Center target sections in viewport on in-page navigation
-        function scrollToHashCenter(hash) {
-            const id = (hash || '').replace('#','');
-            if (!id) return;
-            const el = document.getElementById(id);
-            if (el && typeof el.scrollIntoView === 'function') {
-                // Always align to start so content sits below sticky header
-                el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-            }
-        }
-
-        // Intercept in-page anchor clicks (including nav and CTAs)
-        document.addEventListener('click', (e) => {
-            const a = e.target.closest('a[href^="#"]');
-            if (!a) return;
-            const href = a.getAttribute('href');
-            // Ignore empty or just '#'
-            if (!href || href === '#') return;
-            // If same-page hash, smooth center scroll
-            e.preventDefault();
-            scrollToHashCenter(href);
-            // Update URL hash without jumping
-            history.replaceState(null, '', href);
-        });
-
-        // If landing with a hash, center that section after load (including bfcache restores)
-        const centerIfHash = () => { if (location.hash) scrollToHashCenter(location.hash); };
-        window.addEventListener('DOMContentLoaded', centerIfHash);
-        window.addEventListener('pageshow', centerIfHash);
+        // Hash navigation uses native behavior with CSS smooth scrolling
     </script>
 </body>
 </html>
